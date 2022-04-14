@@ -1,4 +1,5 @@
 import sys
+import random
 from colorama import init
 from colorama import Fore, Back, Style
 init(strip=not sys.stdout.isatty())
@@ -18,37 +19,111 @@ def clear():
         _ = system('clear')
 
 def logo():
-  print(Fore.BLUE + figlet_format('CasinoFuck', font='slant'))
+  print(Fore.BLUE + figlet_format('CasinoTools', font='slant'))
   print(Style.RESET_ALL)
   line()
 
-clear()
-logo()
+loop=True
 
-print(Fore.MAGENTA + "Welcome to CasinoFuck! Please choose a casino below..." + Style.RESET_ALL)
-line()
-print(Fore.RED + "1 ~ BC.GAME" + Style.RESET_ALL)
-line()
-mm1=input("> ")
-
-if mm1=='1':
-  clear()
-  logo()
-  print(Fore.MAGENTA + "Main Menu - BC.GAME")
-  line()
-  print(Fore.RED + "1 ~ Tools")
-  line()
-  bcmm=input("> ")
-
-  if bcmm1=='1':
-    #tools for bc.game
+while loop==True:
     clear()
     logo()
-    print(Fore.MAGENTA + "Tools - BC.GAME")
+    
+    print(Fore.MAGENTA + "Welcome to CasinoTools! Please choose a casino below..." + Style.RESET_ALL)
     line()
-    print(Fore.RED + "1 ~ Lottery")
-    line()
-    bclot1=input("> ")
-    if bclot1=='1':
-      #chances in menu
-      
+    print(Fore.RED + "1 ~ BC.GAME" + Style.RESET_ALL)
+    print(Style.RESET_ALL)
+    mm1=input("> " + Fore.GREEN)
+    
+    if mm1=='1':
+      clear()
+      logo()
+      print(Fore.MAGENTA + "Main Menu - BC.GAME")
+      line()
+      print(Fore.RED + "1 ~ Tools")
+      print(Style.RESET_ALL)
+      bcmm1=input("> " + Fore.GREEN)
+      if bcmm1=='1':
+        #tools for bc.game
+        clear()
+        logo()
+        print(Fore.MAGENTA + "Tools - BC.GAME")
+        line()
+        print(Fore.RED + "1 ~ Lottery")
+        print(Style.RESET_ALL)
+        bclot1=input("> " + Fore.GREEN)
+        if bclot1=='1':
+          clear()
+          logo()
+          print(Fore.MAGENTA + "Lottery Tools - BC.GAME")
+          line()
+          print(Fore.RED + "1 ~ Lottery Odds")
+          print(Fore.RED + "2 ~ Lottery Ball Generator")
+          print(Fore.RED + "3 ~ Lottery Profit Calculator")
+          print(Style.RESET_ALL)
+          bclot2=input("> " + Fore.GREEN)
+          if bclot2=='1':
+            clear()
+            logo()
+            print(Fore.MAGENTA + "Lottery Odds - BC.GAME")
+            line()
+            print(Fore.GREEN + "1 BALL (Bonus Ticket)" + Style.RESET_ALL + Fore.RED + " 1 in 35")
+            print(Fore.GREEN + "2 BALL (Bonus Ticket)" + Style.RESET_ALL + Fore.RED + " 1 in 595")
+            print(Fore.GREEN + "3 BALL ($1)" + Style.RESET_ALL + Fore.RED + " 1 in 6,545")
+            print(Fore.GREEN + "4 BALL ($20)" + Style.RESET_ALL + Fore.RED + " 1 in 52,360")
+            print(Fore.GREEN + "5 BALL ($3000)" + Style.RESET_ALL + Fore.RED + " 1 in 376,992")
+            line()
+            input(Fore.GREEN + "Press enter to continue.")
+            clear()
+            print(Fore.RED + figlet_format('WARNING', font='larry3d'))
+            line()
+            print(Fore.RED + "The lottery is made to look like you can win (since you get a free bonus ticket). YOU WON'T WIN! You cannot get a bonus ticket on a bonus ticket. The most realistic prize is only a dollar and you have a 1 in 6,545 chance of winning. Playing dice at 1% will win you more than the lottery. Don't be taken advantage of.")
+            line()
+            input("Press enter to continue.")
+            clear()
+          if bclot2=='2':
+            #lottery ball gen
+            ball1 = random.randint(0,35)
+            ball2 = random.randint(0,35)
+            ball3 = random.randint(0,35)
+            ball4 = random.randint(0,35)
+            ball5 = random.randint(0,35)
+            jackpotball = random.randint(0,10)
+
+            clear()
+            logo()
+            print(Fore.RED + "Your generated lottery numbers are:" + Fore.GREEN)
+            print(ball1, " / ", ball2, " / ", ball3, " / ", ball4, " / ",  ball5)
+            line()
+            print(Fore.GREEN + "Your jackpot ball is " + Fore.RED, jackpotball)
+            line()
+            input("Press enter to continue.")
+        if bclot2=='3':
+          #profit calc
+          
+          clear()
+          logo()
+          print(Fore.RED + "Please fill out the below form to calculate.")
+          line()
+          print(Fore.GREEN + "TIP: You can use the My Ticket tab to count up how many tickets you have bought.")
+          paidtix=input(Fore.RED + "How many tickets have you bought (Not Bonus Tickets)? ")
+
+          clear()
+          logo()
+          print(Fore.RED + "Please fill out the below form to calculate.")
+          line()
+          print(Fore.GREEN + "TIP: You can use the My Ticket tab to count up how many tickets you have bought.")
+          bonustix=input(Fore.RED + "How many tickets have you bought (Bonus Tickets Only)? ")
+
+          clear()
+          logo()
+          print(Fore.RED + "Please fill out the below form to calculate.")
+          line()
+          print(Fore.GREEN + "TIP: You can use the My Ticket tab to count up your winnings.")
+          bonustix=input(Fore.RED + "How much have you won combined? ")
+
+          #analyze data
+
+          clear()
+          print(Fore.RED + figlet_format('LOTTERY', font='larry3d'))
+          

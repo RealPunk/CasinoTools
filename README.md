@@ -4,7 +4,13 @@
 *CasinoTools is a Python script with a flawless GUI to allow you to* ***legally*** *win at crypto casino games!*
 *We utilize usefull stratagies pushed out by countless players and mathmaticians around the world.*
 
-*CasinoTools is* ***110% FREE*** *and under the GNU LGPLv3 License.*
+*Sadly, the casino always has the edge over the player. Basically, that means you will always lose money when you play. Me? I like to be an advantage player, thats why noobs like you (probally) can take advantage (no pun intended) over the casino and have your **own** edge, this time over the casino.*
+
+*Playing is risky, of course, you win some, you lose some, but with some of the advice and tools in this program, you can (mathmatically proven) make money if you play enough.*
+
+*Don't let the casino take advantage of you and hurl you to the ground. Hurl them into the ground. If you are a professional at playing casino games, and would like to contribute, feel free to send me a message or create a pull request!*
+
+*CasinoTools is* ***100% FREE*** *and under the GNU LGPLv3 License.*
 
 *You can learn more about the GNU LGPLv3 License [here](https://choosealicense.com/licenses/lgpl-3.0/)*
 

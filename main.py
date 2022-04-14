@@ -120,10 +120,33 @@ while loop==True:
           print(Fore.RED + "Please fill out the below form to calculate.")
           line()
           print(Fore.GREEN + "TIP: You can use the My Ticket tab to count up your winnings.")
-          bonustix=input(Fore.RED + "How much have you won combined? ")
+          winnings=input(Fore.RED + "How much have you won combined? ")
 
           #analyze data
 
+          totaltix=int(bonustix)+int(paidtix) #total amount of tickets you bought
+          winningpertix=int(winnings)/totaltix #how much you have won per ticket (if every ticket won a little bit)
+
+          #calculate if you actually won
+
+          cost=int(paidtix)*0.1 #how much all tickets (paid only) cost you
+          actualwin=int(winnings)-cost # how much you won
+
+          if int(winnings)>cost:
+            inprofit=True
+          if int(winnings)<cost:
+            inprofit=False
+
           clear()
           print(Fore.RED + figlet_format('LOTTERY', font='larry3d'))
-          
+          if inprofit==True:
+            print(Fore.GREEN + "Congrats! You are in profit", actualwin, "dollars!")
+          if inprofit==False:
+            print(Fore.RED + "ALERT: You have lost money, your final win amount is", "%.2f" % actualwin, "dollars.")
+          line()
+          print(Fore.RED + "You have played" + Fore.GREEN, str(totaltix) + Fore.RED + " tickets." + Fore.GREEN, paidtix + Fore.RED + " paid tickets and" + Fore.GREEN, bonustix + Fore.RED + " bonus tickets." )
+          line()
+          wpt=str(winningpertix)
+          print(Fore.RED + "You have won" + Fore.GREEN, "%.2f" % wpt + Fore.RED + " dollars per ticket.")
+          line()
+          input("Press enter to continue.")

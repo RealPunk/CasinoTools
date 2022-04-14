@@ -11,3 +11,11 @@
 # ***Who am I?***
 
 *Will be updated soon!*
+
+# ***How to install***
+
+**LINUX MACHINES**
+1. Open a terminal and cd into the folder containing the program's files
+2. Type ``chmod +x install.sh``
+3. Type ``./install.sh``
+4. Type ``python main.py``

@@ -149,4 +149,5 @@ while loop==True:
           wpt=str(winningpertix)
           print(Fore.RED + "You have won" + Fore.GREEN, "%.2f" % wpt + Fore.RED + " dollars per ticket.")
           line()
+          print(Fore.RED + "You have spent" + Fore.GREEN, "%.2f" % cost + Fore.RED + " in total on lottery tickets.")
           input("Press enter to continue.")
